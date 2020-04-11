@@ -1,0 +1,18 @@
+<div>
+  <mat-card class="results-card">
+    <mat-card-title>Results</mat-card-title>
+  </mat-card>
+  <div>
+    <mat-card class="test">
+      <div class="answer" *ngFor='let a of answers.values' [ngClass]='{correct: a.correct}'>
+        {{a.value}}
+        <span class="guide">
+          {{a.correct}}
+        </span>
+      </div>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink='/welcome'>Start Over</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
